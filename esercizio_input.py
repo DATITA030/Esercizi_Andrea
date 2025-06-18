@@ -1,3 +1,6 @@
+"""INPUT per inserire da schermo"""
+
+
 #INPUT istruzione che chiede all'utente di inserire qualcosa a tastiera. indipendentemente dal tipo lo considera una stringa di testo
 print("Questo programma calcola l'area di un rettangolo: ")
 altezza= int(input("inserire altezza del rettangolo: ")) #inserisco dentro la variabile il nome inserito nella tastiera

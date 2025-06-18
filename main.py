@@ -1,3 +1,5 @@
+"""Istruzioni di Base PYTHON"""
+
 #  si possono usare per le stringhe.. sia i " che i '... meglio " perchè non si usano nella lingua italiana
 from operator import truediv
 

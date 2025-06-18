@@ -1,3 +1,6 @@
+"""Cheat programmino per comandi stringhe"""
+
+
 nome= input("scrivi il tuo nome: ")
 print(f"Ciao {nome}, come stai?")
 

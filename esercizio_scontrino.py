@@ -1,3 +1,5 @@
+"""Esercizio su scontrino per input e F-string"""
+
 numero_articoli= int(input("Quanti articoli hai acquistato?"))
 costo_singolo =float(input("Quanto costa il singolo articolo?"))
 totale= numero_articoli * costo_singolo

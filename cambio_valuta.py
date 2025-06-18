@@ -1,4 +1,11 @@
-
+""" funziona
+solo
+se
+si
+parte
+da
+€
+"""
 print("buongiorno, benvenuto al suo ATM di fiducia")
 
 valore=float(input("\ndigitare il valore da convertire: "))

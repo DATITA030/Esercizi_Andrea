@@ -1,3 +1,4 @@
+""" esercizio calcolatrice in 2 Versioni, meno bella e più elegante """
 """
 print("\nBenvenuto/a nella nuova calcolatrice Ramieri Edition!!")
 valore_1=float(input("Insersci il 1° valore: "))

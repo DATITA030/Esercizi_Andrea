@@ -1,3 +1,4 @@
+"""guess the number con l'utilizzo del import random per generare numeri random"""
 import random
 
 
