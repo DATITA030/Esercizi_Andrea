@@ -11,6 +11,8 @@ import random
 print("Benvenuto presso il nostro Bancomat, prego inserire la carta ")
 #deposito=float(input("inserisci la cifra che vuoi depositare"))
 saldo=random.uniform(-5555.99,5000.99)
+#saldo= 2000 per la verifica rendere commento la linea sopra e non questa
+nuovo_saldo=0
 
 selezione=int(input("""selezionare l'opzione desiderata:"
 0 visione saldo
@@ -61,8 +63,9 @@ if selezione <=5:
 
 else:
     print("opzione al momento non presente attendere aggiornamenti") #così però non mi piace, devo ragionare sul da farsi
-nuovo_saldo=saldo            #verificare attentamente linea 64 e 65... se con il prelievo (pulsante 5) vado in negativo non appare il messaggio
-if nuovo_saldo<0 or saldo<0 :
+saldo= nuovo_saldo            #verificare attentamente linea 64 e 65... se con il prelievo (pulsante 5) vado in negativo non appare il messaggio
+
+if saldo<0 :
     print(f"Saldo negativo attenzione{saldo:.2f}")
 print("Ritirare la carta, arrivederci")
 
