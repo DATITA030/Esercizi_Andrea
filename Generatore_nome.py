@@ -13,12 +13,12 @@ iniziale=input("Inserisci la tua iniziale: ").lower()
 giorno=int(input("inserisci il tuo giorno di nascita: "))
 
 mese=int(input("Inserisci il tuo mese di nascita: "))
-
-Lista_nomi=["Aerion","Baelgor","Cyneron","Dravok","Elandor","Faelir","Goramir","Helvorn","Itharos","Jandrel","Kaelric","Loramir","Myrrin","Nerion","Orvak","Pyrren","Quelvar","Rivenor","Sylthar","Thalior","Umbrek","Vaelor" ,"Wynskar","Xarion" ,"Ysilven" ,"Zarvek"]
-
-lista_aggettivo=["Antico", "Oscuro", "Sacro", "Selvaggio", "Etereo", "Mistico", "Celestiale", "Tenebroso", "Fiammeggiante", "Glaciale", "Incantato", "Perduto", "Maledetto", "Benedetto", "Primordiale", "Dorato", "Sanguinoso", "Divino", "Lunare", "Solare", "Abissale", "Silenzioso", "Vorticoso", "Spettrale", "Maestoso", "Arcano", "Venerato", "Sussurrante", "Dimenticato", "Bruciante", "Implacabile"]
-
-lista_titolo=["Custode", "Evocatore", "Stregone", "Profeta", "Veggente", "Signore", "Guardiano", "Errante", "Araldo", "Druido", "Campione", "Ombra"]
+#ora è una tupla
+Lista_nomi=("Aerion","Baelgor","Cyneron","Dravok","Elandor","Faelir","Goramir","Helvorn","Itharos","Jandrel","Kaelric","Loramir","Myrrin","Nerion","Orvak","Pyrren","Quelvar","Rivenor","Sylthar","Thalior","Umbrek","Vaelor" ,"Wynskar","Xarion" ,"Ysilven" ,"Zarvek")
+#ora è una tupla
+lista_aggettivo=("Antico", "Oscuro", "Sacro", "Selvaggio", "Etereo", "Mistico", "Celestiale", "Tenebroso", "Fiammeggiante", "Glaciale", "Incantato", "Perduto", "Maledetto", "Benedetto", "Primordiale", "Dorato", "Sanguinoso", "Divino", "Lunare", "Solare", "Abissale", "Silenzioso", "Vorticoso", "Spettrale", "Maestoso", "Arcano", "Venerato", "Sussurrante", "Dimenticato", "Bruciante", "Implacabile")
+#ora è una tupla
+lista_titolo=("Custode", "Evocatore", "Stregone", "Profeta", "Veggente", "Signore", "Guardiano", "Errante", "Araldo", "Druido", "Campione", "Ombra")
 
 lettere_numeri = {
     "a": 1,  "b": 2,  "c": 3,  "d": 4,  "e": 5,
@@ -39,12 +39,11 @@ titolo=lista_titolo[mese-1]
 
 
 
-#indice_nome=0
-#print(indice_nome)
+
 
 if indice_nome== 0 and giorno==3 and mese==7:
 
-    print("ANNA SECONDO ME DORME!")
+    print(f"ANNA SECONDO ME DORME!\nScherzo il tuo nome è: {nome} {titolo} {aggettivo}, giuro, pensavo peggio!")
 elif indice_nome== 18 and giorno==26 and mese==5:
     print("Sabrina Sei Mitica!")
 else:
@@ -52,10 +51,32 @@ else:
 
 
 
-#print(help(str))
-#Guardiano
-"""numero=0
-lettere=["a","b","c"]
-for lettera in lettere:
-    lettere.replace("lettera","numero"+1)
-"""
+#VERSIONE CON MATTEO e SABRINA
+
+titoli_mensili = {
+    "Gennaio": "Decollo Invernale",
+    "Febbraio": "Rotta Verso l’Orizzonte",
+    "Marzo": "Turbulenze di Primavera",
+    "Aprile": "Manovre di Rinnovamento",
+    "Maggio": "Quota Maggiore",
+    "Giugno": "Virata Estiva",
+    "Luglio": "Cieli Sereni",
+    "Agosto": "Volo d’Altura",
+    "Settembre": "Atterraggio Morbido",
+    "Ottobre": "Controllo Rotta",
+    "Novembre": "Avviso di Turbolenza",
+    "Dicembre": "Check List"
+}
+aggettivi_giornalieri = {
+    1: "aerodinamico",  2: "slanciato",     3: "scattante",    4: "vigile",
+    5: "pronto",        6: "preciso",       7: "elevato",      8: "lucido",
+    9: "reattivo",     10: "radarizzato",  11: "coordinato", 12: "sollevato",
+   13: "lineare",      14: "strategico",   15: "navigato",   16: "rapido",
+   17: "sicuro",       18: "flessibile",   19: "orientato",  20: "controllato",
+   21: "calibrato",    22: "agile",        23: "impeccabile",24: "preparato",
+   25: "reattivo",     26: "dominante",    27: "persistente",28: "equilibrato",
+   29: "veloce",       30: "disciplinato", 31: "concentrato"}
+mese_nascita= input("in quale mese sei nato?").capitalize().strip()
+giorno_nascita= int(input("in quale giorno sei nato: ").strip())
+
+print(f"il tuo nuovo nome è: {titoli_mensili[mese_nascita]} {aggettivi_giornalieri[giorno_nascita]}")
