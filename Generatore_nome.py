@@ -8,7 +8,9 @@
 #voillà il nome
 
 
-iniziale=input("Inserisci la tua iniziale: ").lower()
+nome=input("Inserisci il tuo nome: ").lower().strip()
+iniziale=nome[0]
+print(iniziale)
 
 giorno=int(input("inserisci il tuo giorno di nascita: "))
 
@@ -52,7 +54,7 @@ else:
 
 
 #VERSIONE CON MATTEO e SABRINA
-
+"""
 titoli_mensili = {
     "Gennaio": "Decollo Invernale",
     "Febbraio": "Rotta Verso l’Orizzonte",
@@ -80,3 +82,4 @@ mese_nascita= input("in quale mese sei nato?").capitalize().strip()
 giorno_nascita= int(input("in quale giorno sei nato: ").strip())
 
 print(f"il tuo nuovo nome è: {titoli_mensili[mese_nascita]} {aggettivi_giornalieri[giorno_nascita]}")
+"""
