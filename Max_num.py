@@ -11,10 +11,17 @@ for num in numeri:
         position=numeri.index(max_num)
 print(f"il numero più alto è {max_num} in posizione {position} ")
 
+
+"""Secondo esercizio|
+                    |
+                    V     """
+
+
+
 #utilizzo un ciclo  while per iterare l'utilizzo di .append
 voti=[]
 while True:
-    voto=(input("voto: "))
+    voto=(input("Inserire il voto o digita fine: ")).lower()
     if voto== "fine":
         break
     else:
