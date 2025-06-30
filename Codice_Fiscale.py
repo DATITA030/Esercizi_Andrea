@@ -88,7 +88,8 @@ comuni_dizionario={
     "milano": "F205",
     "magenta": "E801",
     "bustoarsizio": "B300",
-    "ecuador": "Z605"
+    "ecuador": "Z605",
+    "torino": "L219"
 }
 valori_dispari = {
     "0": 1,  "1": 0,  "2": 5,  "3": 7,  "4": 9,  "5": 13, "6": 15, "7": 17, "8": 19, "9": 21,
@@ -132,7 +133,7 @@ lista_consonanti, lista_vocali=separa_vocali_consonanti(nome)
 #cf_nome=temp_cf[0]+temp_cf[1]+temp_cf[2]
 
 if len(lista_consonanti)>=4:
-    cf+=lista_consonanti[0]+lista_consonanti[1]+lista_consonanti[2]
+    cf+=lista_consonanti[0]+lista_consonanti[2]+lista_consonanti[3]
 else:
     temp_cf = lista_consonanti + lista_vocali + ["X", "X", "X"]
     cf+=temp_cf[0] + temp_cf[1] + temp_cf[2]
