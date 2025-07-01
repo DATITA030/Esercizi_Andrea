@@ -1,7 +1,7 @@
 
 
 class User:
-    def __init__(self,name,age,surname,address):
+    def __init__(self,name,age,surname,address,fiscal_code):
 
         #attr pubblici
         self.name=name
@@ -12,6 +12,7 @@ class User:
 
         #attributo privato
         self.__address =address
+        self.__fiscal_code= fiscal_code
 
     #metodo pubblico
     def say_hello(self):
@@ -33,9 +34,26 @@ class User:
     def set_addres(self,address):
         self.__address =address
 
+    @property
+    def fiscal_code(self):
+        return self.__fiscal_code
+
+    #metodo setter con il decoratore
+    @fiscal_code.setter
+    def fiscal_code(self, fiscal_code):
+        self.__fiscal_code=fiscal_code
 
 
 if __name__== "__main__":
     # test e debug
     user_obj =User("Marco",30,"Aurelio","Polibio")
     print(user_obj.say_hello())
+    print(user_obj._drive())
+
+    #richiamo un metodo get con il decoratore property Viene richiamato non come se fosse un METODO, ma come un ATTRIBUTO Pubblico
+    print(user_obj.fiscal_code)
+
+    #imposto il valore di fiscal_code usando il metodo setter
+    #con il decoratore
+    user_obj.fiscal_code="nuovo codice fiscale"
+    print(f"Il nuovo codice fiscale di {user_obj.name} è {user_obj.fiscal_code}")

@@ -26,3 +26,5 @@ if __name__=="__main__":
     user1.set_addres("Firenze")
     print(f"Il nuovo valore di __address è {user1.get_address()}")
 
+    #accesso all'attributo PRIVATO fiscal code con il getter @property
+    print(f"Il codice fiscale di {user1.name} è {user1.fiscal_code}")  #l'auto completamento me lo segna con una p viola perchè pycharm riconosce il property
